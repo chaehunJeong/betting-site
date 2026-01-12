@@ -1,0 +1,110 @@
+/* 정책 페이지 전용 스타일 */
+
+.breadcrumb {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.breadcrumb a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.page-content {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-content h1 {
+    font-size: 2.5rem;
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.last-updated {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.page-content section {
+    margin-bottom: 40px;
+}
+
+.page-content h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    border-left: 4px solid #667eea;
+}
+
+.page-content p {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.page-content ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.page-content li {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.page-content a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.page-content a:hover {
+    text-decoration: underline;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .page-content {
+        padding: 25px;
+    }
+
+    .page-content h1 {
+        font-size: 2rem;
+    }
+
+    .page-content h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-content {
+        padding: 20px;
+    }
+
+    .page-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .page-content h2 {
+        font-size: 1.2rem;
+    }
+}
