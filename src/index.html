@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-5144337054472639">
+
+    <!-- SEO 메타 태그 -->
+    <meta name="description" content="사진을 올리고 랜덤으로 선택해보세요! 점심 메뉴, 커피 내기, 게임 등 결정 장애를 쉽고 재미있게 해결하는 무료 랜덤 선택기">
+    <meta name="keywords" content="랜덤선택, 랜덤뽑기, 결정장애, 점심메뉴추천, 랜덤추천, 무료랜덤, 사진선택, 이미지랜덤">
+    <meta name="author" content="Random Picker">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://randompicker.com/">
+    <meta property="og:title" content="랜덤 선택기 - 결정 장애 해결사">
+    <meta property="og:description" content="사진을 올리고 랜덤으로 선택해보세요! 점심 메뉴, 내기, 게임 등 결정 장애 해결">
+    <meta property="og:image" content="https://randompicker.com/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://randompicker.com/">
+    <meta property="twitter:title" content="랜덤 선택기 - 결정 장애 해결사">
+    <meta property="twitter:description" content="사진을 올리고 랜덤으로 선택해보세요! 점심 메뉴, 내기, 게임 등 결정 장애 해결">
+    <meta property="twitter:image" content="https://randompicker.com/og-image.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://randompicker.com/">
+
+    <title>랜덤 선택기 - 결정 장애 해결사 | 무료 이미지 랜덤 추첨</title>
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5144337054472639"
+     crossorigin="anonymous"></script>
+
+    <!-- 구조화된 데이터 (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "랜덤 선택기",
+      "description": "사진을 올리고 랜덤으로 선택해주는 웹 애플리케이션",
+      "url": "https://randompicker.com/",
+      "applicationCategory": "Utility",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Random Picker"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- 메인 컨테이너 -->
+    <div class="container">
+        <!-- 언어 선택 -->
+        <div class="language-selector">
+            <button class="lang-btn" data-lang="ko" onclick="changeLanguage('ko')">🇰🇷 한국어</button>
+            <button class="lang-btn" data-lang="en" onclick="changeLanguage('en')">🇺🇸 English</button>
+            <button class="lang-btn" data-lang="ja" onclick="changeLanguage('ja')">🇯🇵 日本語</button>
+            <button class="lang-btn" data-lang="zh" onclick="changeLanguage('zh')">🇨🇳 中文</button>
+        </div>
+
+        <!-- 헤더 -->
+        <header class="header">
+            <h1>🎲 랜덤 선택기</h1>
+            <p class="subtitle">사진을 올리면 하나를 골라드려요!</p>
+        </header>
+
+        <!-- 메인 섹션 -->
+        <main class="main-content">
+            <!-- 소개 섹션 -->
+            <section class="intro-section section">
+                <h2>🎯 결정 장애, 이제 그만!</h2>
+                <p class="intro-text">
+                    점심 메뉴 고민, 커피 값 내기, 게임 캐릭터 선택... 매일 반복되는 작은 선택들이 스트레스가 되나요?
+                    <strong>랜덤 선택기</strong>가 공정하고 재미있게 해결해드립니다!
+                </p>
+                <div class="intro-features">
+                    <div class="intro-feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <h3>빠른 선택</h3>
+                        <p>10초 안에 결정 완료</p>
+                    </div>
+                    <div class="intro-feature-item">
+                        <div class="feature-icon">🔒</div>
+                        <h3>안전한 사용</h3>
+                        <p>이미지는 서버에 저장되지 않아요</p>
+                    </div>
+                    <div class="intro-feature-item">
+                        <div class="feature-icon">🎲</div>
+                        <h3>공정한 랜덤</h3>
+                        <p>암호학적으로 안전한 알고리즘</p>
+                    </div>
+                    <div class="intro-feature-item">
+                        <div class="feature-icon">📱</div>
+                        <h3>모바일 최적화</h3>
+                        <p>언제 어디서나 사용 가능</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 업로드 섹션 -->
+            <section id="upload-section" class="section">
+                <div class="upload-area">
+                    <div class="upload-icon">📸</div>
+                    <h2>사진을 선택해주세요</h2>
+                    <p>최소 2장, 최대 20장까지 가능해요</p>
+
+                    <div class="upload-buttons">
+                        <label for="file-input" class="btn btn-primary">
+                            📁 갤러리에서 선택
+                        </label>
+                        <label for="camera-input" class="btn btn-secondary">
+                            📷 사진 촬영
+                        </label>
+                    </div>
+
+                    <input
+                        type="file"
+                        id="file-input"
+                        accept="image/*"
+                        multiple
+                        style="display: none;"
+                    >
+                    <input
+                        type="file"
+                        id="camera-input"
+                        accept="image/*"
+                        capture="environment"
+                        multiple
+                        style="display: none;"
+                    >
+                </div>
+
+                <!-- 이미지 미리보기 그리드 -->
+                <div id="preview-container" class="preview-container hidden">
+                    <h3>업로드된 사진 (<span id="image-count">0</span>장)</h3>
+                    <div id="image-grid" class="image-grid"></div>
+                    <button id="select-btn" class="btn btn-large btn-primary">
+                        🎯 랜덤 선택하기
+                    </button>
+                </div>
+            </section>
+
+            <!-- 결과 섹션 -->
+            <section id="result-section" class="section hidden">
+                <div class="result-container">
+                    <h2>🎉 선택된 결과</h2>
+                    <div id="result-image" class="result-image"></div>
+                    <div class="result-buttons">
+                        <button id="retry-btn" class="btn btn-secondary">
+                            🔄 다시 뽑기
+                        </button>
+                        <button id="new-btn" class="btn btn-primary">
+                            ✨ 새로운 사진으로 시작
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 사용법 섹션 -->
+            <section class="how-it-works section">
+                <h2>📖 사용법 (3단계로 끝!)</h2>
+                <div class="steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <h3>사진 준비</h3>
+                        <p>선택하고 싶은 항목들의 사진을 찍거나 준비하세요. 점심 메뉴, 카드, 게임 캐릭터 등 무엇이든 OK!</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <h3>업로드</h3>
+                        <p>갤러리에서 선택하거나 바로 촬영하세요. 최소 2장부터 최대 20장까지 가능합니다.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <h3>랜덤 선택</h3>
+                        <p>"랜덤 선택하기" 버튼을 누르면 재미있는 애니메이션과 함께 하나가 선택됩니다!</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="how-to-use.html" class="btn btn-secondary">자세한 사용법 보기 →</a>
+                </div>
+            </section>
+
+            <!-- 활용 사례 섹션 -->
+            <section class="use-cases section">
+                <h2>💡 이럴 때 사용하세요!</h2>
+                <div class="use-case-grid">
+                    <div class="use-case-item">
+                        <div class="use-case-emoji">🍱</div>
+                        <h3>점심 메뉴 선택</h3>
+                        <p>매일 반복되는 "뭐 먹을까?" 고민. 메뉴판 사진 찍고 바로 결정!</p>
+                    </div>
+                    <div class="use-case-item">
+                        <div class="use-case-emoji">☕</div>
+                        <h3>커피 내기</h3>
+                        <p>팀원들의 이름표나 카드 사진으로 공정하게 커피 값 내는 사람 뽑기</p>
+                    </div>
+                    <div class="use-case-item">
+                        <div class="use-case-emoji">🎮</div>
+                        <h3>게임 캐릭터 선택</h3>
+                        <p>어떤 캐릭터를 플레이할지 고민? 스크린샷 모아서 랜덤 선택!</p>
+                    </div>
+                    <div class="use-case-item">
+                        <div class="use-case-emoji">✈️</div>
+                        <h3>여행지 결정</h3>
+                        <p>가고 싶은 여행지가 너무 많아? 사진 모아서 운명에 맡겨보세요</p>
+                    </div>
+                    <div class="use-case-item">
+                        <div class="use-case-emoji">🎬</div>
+                        <h3>영화/드라마 선택</h3>
+                        <p>오늘 볼 영화 고민? 포스터 사진으로 빠르게 결정</p>
+                    </div>
+                    <div class="use-case-item">
+                        <div class="use-case-emoji">🎁</div>
+                        <h3>선물 추첨</h3>
+                        <p>이벤트나 모임에서 경품 추첨할 때 공정하고 재미있게!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 특징 섹션 -->
+            <section class="features section">
+                <h2>✨ 왜 랜덤 선택기를 사용해야 할까요?</h2>
+                <div class="feature-list">
+                    <div class="feature-detail">
+                        <div class="feature-icon-large">🚀</div>
+                        <div class="feature-content">
+                            <h3>빠르고 간편한 사용</h3>
+                            <p>회원가입 없이 바로 사용할 수 있습니다. 사진 업로드부터 선택까지 단 10초! 복잡한 설정이나 학습 없이 누구나 쉽게 사용할 수 있습니다.</p>
+                        </div>
+                    </div>
+                    <div class="feature-detail">
+                        <div class="feature-icon-large">🔐</div>
+                        <div class="feature-content">
+                            <h3>완벽한 개인정보 보호</h3>
+                            <p>업로드한 이미지는 서버에 절대 저장되지 않습니다. 모든 처리는 브라우저 메모리에서만 이루어지며, 페이지를 닫으면 자동으로 삭제됩니다.</p>
+                        </div>
+                    </div>
+                    <div class="feature-detail">
+                        <div class="feature-icon-large">🎲</div>
+                        <div class="feature-content">
+                            <h3>진짜 랜덤, 진짜 공정</h3>
+                            <p>Crypto API를 사용한 암호학적으로 안전한 랜덤 알고리즘으로 완전히 공정한 선택을 보장합니다. 어떤 조작이나 편향도 없습니다.</p>
+                        </div>
+                    </div>
+                    <div class="feature-detail">
+                        <div class="feature-icon-large">📱</div>
+                        <div class="feature-content">
+                            <h3>모바일에 최적화</h3>
+                            <p>스마트폰, 태블릿, 데스크톱 모두에서 완벽하게 작동합니다. 모바일에서는 카메라를 바로 실행해서 촬영할 수 있어 더욱 편리합니다.</p>
+                        </div>
+                    </div>
+                    <div class="feature-detail">
+                        <div class="feature-icon-large">🌍</div>
+                        <div class="feature-content">
+                            <h3>다국어 지원</h3>
+                            <p>한국어, 영어, 일본어, 중국어를 지원합니다. 전 세계 누구나 편하게 사용할 수 있습니다.</p>
+                        </div>
+                    </div>
+                    <div class="feature-detail">
+                        <div class="feature-icon-large">💯</div>
+                        <div class="feature-content">
+                            <h3>완전 무료</h3>
+                            <p>모든 기능을 무료로 제공합니다. 숨겨진 비용이나 프리미엄 기능이 없습니다. 언제든지 무제한으로 사용하세요!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ 섹션 -->
+            <section class="faq section">
+                <h2>❓ 자주 묻는 질문</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>Q. 업로드한 사진은 안전한가요?</h3>
+                        <p>A. 네, 100% 안전합니다! 업로드한 이미지는 서버에 전혀 저장되지 않으며, 브라우저 메모리에서만 처리됩니다. 페이지를 닫으면 자동으로 삭제되어 개인정보가 완벽하게 보호됩니다.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q. 정말 공정한 랜덤인가요?</h3>
+                        <p>A. 네! Crypto API의 getRandomValues() 메서드를 사용하여 암호학적으로 안전한 랜덤 숫자를 생성합니다. 이는 일반적인 Math.random()보다 훨씬 예측 불가능하고 공정합니다.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q. 회원가입이 필요한가요?</h3>
+                        <p>A. 아니요! 회원가입이나 로그인 없이 바로 사용할 수 있습니다. 개인정보를 수집하지 않아 더욱 안심하고 사용하실 수 있습니다.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q. 몇 장의 사진을 업로드할 수 있나요?</h3>
+                        <p>A. 최소 2장부터 최대 20장까지 업로드 가능합니다. 각 이미지는 최대 5MB까지 지원하며, JPG, PNG, WebP 등 대부분의 이미지 형식을 지원합니다.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q. 모바일에서도 사용할 수 있나요?</h3>
+                        <p>A. 물론입니다! 모바일에 완벽하게 최적화되어 있습니다. 스마트폰에서는 "사진 촬영" 버튼을 누르면 카메라가 바로 실행되어 더욱 편리하게 사용할 수 있습니다.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q. 비용이 드나요?</h3>
+                        <p>A. 완전 무료입니다! 모든 기능을 무제한으로 사용할 수 있으며, 숨겨진 비용이나 프리미엄 기능이 없습니다.</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 30px;">
+                    <p style="color: #666;">더 궁금한 점이 있으신가요?</p>
+                    <a href="how-to-use.html#faq" style="color: #667eea; text-decoration: underline;">전체 FAQ 보기 →</a>
+                </div>
+            </section>
+
+            <!-- CTA 섹션 -->
+            <section class="cta section">
+                <div class="cta-content">
+                    <h2>🎉 지금 바로 시작해보세요!</h2>
+                    <p>결정 장애로 고민하는 시간을 줄이고, 더 중요한 일에 집중하세요</p>
+                    <button onclick="document.getElementById('file-input').click()" class="btn btn-large btn-primary" style="margin: 20px auto 0;">
+                        📸 사진 업로드하고 시작하기
+                    </button>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 15px;">회원가입 없이 바로 사용 가능 • 완전 무료</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- 푸터 -->
+        <footer class="footer">
+            <p>
+                © 2026 랜덤 선택기 |
+                <a href="how-to-use.html" style="color: white; text-decoration: underline;">사용법</a> |
+                <a href="privacy.html" style="color: white; text-decoration: underline;">개인정보 처리방침</a> |
+                <a href="terms.html" style="color: white; text-decoration: underline;">이용약관</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="scripts/i18n.js"></script>
+    <script src="scripts/cookie-consent.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

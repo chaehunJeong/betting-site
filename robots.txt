@@ -1,0 +1,14 @@
+# robots.txt for Random Picker
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://randompicker.com/sitemap.xml
+
+# 크롤링 속도 제한 (1초당 1회)
+Crawl-delay: 1
+
+# 불필요한 페이지 차단 (있을 경우)
+# Disallow: /admin/
+# Disallow: /private/
